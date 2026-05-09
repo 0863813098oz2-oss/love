@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ครบ 1 เดือนของเรา 💕</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Sarabun:wght@300;400;500&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<style>
+:root{--rose:#c9636a;--blush:#f2c4ce;--cream:#fdf6f0;--wine:#7b2d3e;--dark:#2a1a1f}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--cream);font-family:'Sarabun',sans-serif;min-height:100vh;overflow-x:hidden;color:var(--dark)}
+.petal{position:fixed;background:radial-gradient(ellipse,var(--blush),var(--rose));border-radius:50% 0 50% 0;opacity:0;animation:fall linear infinite;z-index:0;pointer-events:none}
+@keyframes fall{0%{transform:translateY(-20px) rotate(0deg);opacity:.7}100%{transform:translateY(110vh) rotate(360deg);opacity:0}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@keyframes heartPop{from{opacity:0;transform:scale(.3)}to{opacity:1;transform:scale(1)}}
+.container{position:relative;z-index:1;max-width:480px;margin:0 auto;padding:40px 24px 60px;text-align:center}
+.badge{display:inline-block;background:linear-gradient(135deg,var(--rose),var(--wine));color:#fff;font-size:12px;letter-spacing:3px;padding:6px 18px;border-radius:50px;margin-bottom:20px;font-weight:500;opacity:0;animation:fadeUp .7s ease .1s forwards}
+.big-heart{font-size:52px;display:block;margin:16px auto;opacity:0;animation:heartPop .6s cubic-bezier(.34,1.56,.64,1) .2s forwards}
+.main-title{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(40px,11vw,58px);color:var(--wine);line-height:1.1;margin-bottom:8px;opacity:0;animation:fadeUp .8s ease .3s forwards}
+.subtitle{font-size:14px;color:var(--rose);font-weight:300;letter-spacing:2px;margin-bottom:10px;opacity:0;animation:fadeUp .8s ease .5s forwards}
+.divider{display:flex;align-items:center;gap:12px;margin:20px 0;opacity:0;animation:fadeUp .7s ease .6s forwards}
+.divider::before,.divider::after{content:'';flex:1;height:1px;background:linear-gradient(to right,transparent,var(--blush),transparent)}
+.milestone{background:linear-gradient(135deg,#fff5f6,#fff0ea);border:1.5px solid var(--blush);border-radius:16px;padding:20px;margin-bottom:24px;opacity:0;animation:fadeUp .8s ease .7s forwards}
+.milestone-num{font-family:'Playfair Display',serif;font-size:64px;font-weight:700;color:var(--wine);line-height:1}
+.milestone-unit{font-size:18px;color:var(--rose);letter-spacing:1px;margin-top:4px}
+.milestone-date{font-size:13px;color:#b89aa0;margin-top:8px}
+.letter-card{background:#fff;border-radius:20px;padding:32px 28px;box-shadow:0 4px 40px rgba(201,99,106,.1);border:1px solid rgba(201,99,106,.12);text-align:left;margin-bottom:24px;opacity:0;animation:fadeUp .9s ease .85s forwards;position:relative;overflow:hidden}
+.letter-card::before{content:'❝';position:absolute;top:-10px;left:14px;font-size:80px;color:var(--blush);font-family:'Playfair Display',serif;opacity:.35;line-height:1}
+.letter-text{font-size:15.5px;line-height:2;color:#3d2a30;position:relative;z-index:1}
+.hl{color:var(--wine);font-family:'Playfair Display',serif;font-style:italic;font-weight:700}
+.letter-sign{margin-top:20px;text-align:right;font-family:'Playfair Display',serif;font-style:italic;font-size:17px;color:var(--rose)}
+.stats-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:24px;opacity:0;animation:fadeUp .8s ease 1.05s forwards}
+.stat-box{background:#fff;border-radius:14px;padding:16px 8px;border:1px solid rgba(201,99,106,.15);box-shadow:0 2px 16px rgba(201,99,106,.06)}
+.stat-num{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--wine);line-height:1}
+.stat-label{font-size:11px;color:var(--rose);margin-top:4px}
+.qr-section{background:#fff;border-radius:20px;padding:28px 24px;box-shadow:0 4px 40px rgba(201,99,106,.1);border:1px solid rgba(201,99,106,.12);opacity:0;animation:fadeUp .8s ease 1.2s forwards}
+.qr-title{font-family:'Playfair Display',serif;font-style:italic;font-size:18px;color:var(--wine);margin-bottom:6px}
+.qr-desc{font-size:13px;color:#9a7a82;margin-bottom:20px}
+#qrcode{display:flex;justify-content:center;margin-bottom:16px}
+#qrcode canvas,#qrcode img{border-radius:12px;border:6px solid var(--cream);box-shadow:0 4px 20px rgba(201,99,106,.15)}
+.share-url{font-size:11.5px;color:#b89aa0;word-break:break-all;background:var(--cream);padding:10px 14px;border-radius:10px;margin-bottom:14px}
+.copy-btn{background:linear-gradient(135deg,var(--rose),var(--wine));color:#fff;border:none;padding:12px 32px;border-radius:50px;font-family:'Sarabun',sans-serif;font-size:14px;font-weight:500;cursor:pointer;box-shadow:0 4px 20px rgba(123,45,62,.3)}
+.footer-hearts{margin-top:40px;font-size:20px;letter-spacing:8px;opacity:0;animation:fadeUp .8s ease 1.4s forwards}
+</style>
+</head>
+<body>
+<script>
+for(let i=0;i<20;i++){const p=document.createElement('div');p.className='petal';p.style.cssText=`left:${Math.random()*100}vw;width:${7+Math.random()*9}px;height:${9+Math.random()*11}px;animation-duration:${5+Math.random()*9}s;animation-delay:${Math.random()*9}s;`;document.body.appendChild(p)}
+</script>
+<div class="container">
+  <div class="badge">✦ ครบรอบ 1 เดือน ✦</div>
+  <span class="big-heart">💕</span>
+  <h1 class="main-title">1 เดือนแล้วนะ</h1>
+  <p class="subtitle">9 เมษายน — 9 พฤษภาคม 2026</p>
+  <div class="divider"><span>🌸</span></div>
+  <div class="milestone">
+    <div class="milestone-num">1</div>
+    <div class="milestone-unit">เดือนที่มีความสุขที่สุด</div>
+    <div class="milestone-date">เริ่มต้น 9 เม.ย. 2026 · ครบรอบวันนี้ 💗</div>
+  </div>
+  <div class="letter-card">
+    <p class="letter-text">
+      ผ่านมาแค่เดือนเดียว แต่รู้สึกเหมือนรู้จักเธอมานานมากแล้ว…<br><br>
+      ทุกวันที่ผ่านมา ฉันแอบยิ้มทุกครั้งที่เห็นชื่อเธอขึ้น แอบดีใจทุกครั้งที่ได้คุยกัน และแอบตั้งใจเงียบๆ ว่า
+      <span class="hl">อยากให้ทุกวันมีเธออยู่ด้วย</span><br><br>
+      1 เดือนนี้ เธอทำให้ชีวิตฉันอบอุ่นขึ้น สีสันขึ้น และมีความหมายมากขึ้นกว่าที่เคยเป็น<br><br>
+      วันนี้อยากบอกเธอตรงๆ ว่า — <span class="hl">ฉันรักเธอ</span> และขอบคุณที่เลือกอยู่ข้างฉัน ไม่ว่าจะอีกกี่เดือน กี่ปี ฉันก็ยังจะรู้สึกแบบนี้ 🌹
+    </p>
+    <p class="letter-sign">— ด้วยรัก, คนที่รักเธอ 💌</p>
+  </div>
+  <div class="stats-row">
+    <div class="stat-box"><div class="stat-num" id="days">30</div><div class="stat-label">วันที่ผ่านมา</div></div>
+    <div class="stat-box"><div class="stat-num">1</div><div class="stat-label">เดือนแรก</div></div>
+    <div class="stat-box"><div class="stat-num">∞</div><div class="stat-label">ความรัก</div></div>
+  </div>
+  <div class="qr-section">
+    <p class="qr-title">ส่งให้คนพิเศษ 🎀</p>
+    <p class="qr-desc">สแกน QR หรือคัดลอกลิงก์ส่งให้เธอได้เลย</p>
+    <div id="qrcode"></div>
+    <div class="share-url" id="shareUrl">กำลังโหลด...</div>
+    <button class="copy-btn" onclick="copyLink()">📋 คัดลอกลิงก์</button>
+  </div>
+  <div class="footer-hearts">♥ ♡ ♥ ♡ ♥</div>
+</div>
+<script>
+document.getElementById('days').textContent=Math.floor((new Date('2026-05-09')-new Date('2026-04-09'))/86400000);
+const url=window.location.href;
+document.getElementById('shareUrl').textContent=url;
+new QRCode(document.getElementById('qrcode'),{text:url,width:180,height:180,colorDark:'#7b2d3e',colorLight:'#fdf6f0',correctLevel:QRCode.CorrectLevel.H});
+function copyLink(){navigator.clipboard.writeText(url).then(()=>{const b=document.querySelector('.copy-btn');b.textContent='✅ คัดลอกแล้ว!';setTimeout(()=>b.textContent='📋 คัดลอกลิงก์',2000)})}
+</script>
+</body>
+</html>
